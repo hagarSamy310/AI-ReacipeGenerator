@@ -1,0 +1,16 @@
+.suggested-recipe-container {
+	padding-top: 2rem;
+	color: #475467;
+	line-height: 28px;
+	font-size: 1.125rem;
+	font-weight: 400;
+}
+
+.suggested-recipe-container ul li,
+.suggested-recipe-container ol li {
+	margin-bottom: 8px;
+}
+
+.loading {
+	font-weight: bold;
+}
