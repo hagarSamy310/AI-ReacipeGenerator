@@ -1,7 +1,6 @@
 main {
 	padding: 30px 30px 10px;
 }
-
 /* Add ingredients Form */
 form {
 	display: flex;
@@ -38,7 +37,7 @@ form > button:hover {
 }
 
 form > button::before {
-	content: "+";
+	content: "+ ";
 	margin-right: 5px;
 }
 
@@ -62,15 +61,12 @@ form > button::before {
 	line-height: 20px;
 }
 .get-recipe-container button {
-	border: none;
 	border-radius: 6px;
 	background: #d17557;
 	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 	color: #fafaf8;
 	padding: 9px 17px;
-	font-family: Inter, sans-serif;
 	font-size: 0.875rem;
-	cursor: pointer;
 }
 .get-recipe-container button:hover {
 	transform: scale(1.1);

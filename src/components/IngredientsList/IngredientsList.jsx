@@ -1,23 +1,25 @@
 import "./IngredientsList.css";
+import {translations} from "../../translations"
 
-export function IngredientsList({ ingredients, getRecipe, ref }) {
+
+export function IngredientsList({ ingredients, getRecipe, ref, language}) {
 	const ingredientsList = ingredients.map((ingredient) => {
 		return <li key={ingredient}>{ingredient}</li>;
 	});
 
 	return (
 		<section>
-			<h2>Ingredients on hand:</h2>
+			<h2>{translations[language].ingredientsTitle}</h2>
 			<ul className="ingredients-list" aria-live="polite">
 				{ingredientsList}
 			</ul>
 			{ingredients.length > 3 ? (
 				<div className="get-recipe-container" ref={ref}>
 					<div>
-						<h3>Ready for a recipe?</h3>
-						<p>Generate a recipe from your list of ingredients.</p>
+						<h3>{translations[language].recipePromptTitle}</h3>
+						<p>{translations[language].recipePromptDesc}</p>
 					</div>
-					<button onClick={getRecipe}>Get a recipe</button>
+					<button onClick={getRecipe}>{translations[language].getRecipeButton}</button>
 				</div>
 			) : null}
 		</section>

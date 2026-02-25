@@ -4,6 +4,13 @@
 
 body {
 	margin: 0;
-	font-family: Inter, sans-serif;
+	font-family: "Tajawal", sans-serif;
 	background-color: #fafaf8;
+}
+
+button {
+	white-space: nowrap;
+	cursor: pointer;
+	font-family: "Tajawal", sans-serif;
+	border: none;
 }
