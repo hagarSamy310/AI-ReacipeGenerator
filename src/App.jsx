@@ -8,7 +8,6 @@ import { useState, useEffect, useRef } from "react";
 
 export function App() {
 	const [language, setLanguage] = useState("en");
-	const t = translations[language];
 	const [ingredients, setIngredients] = useState([]);
 	const [recipe, setRecipe] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
@@ -19,6 +18,7 @@ export function App() {
 	}
 	function addIngredient(data) {
 		const newIngredient = data.get("ingredient");
+		if (!newIngredient.trim()) return;
 		setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
 	}
 
@@ -36,24 +36,29 @@ export function App() {
 			recipeView.current.scrollIntoView({ behavior: "smooth" });
 	}, [recipe]);
 
+	function reset() {
+		setIngredients([]);
+		setRecipe("");
+	}
 	return (
 		<>
 			<Header language={language} toggleLanguage={toggleLanguage}></Header>
 			<main dir={language === "ar" ? "rtl" : "ltr"}>
+				<p className="tagline">{translations[language].tagline}</p>
 				<form action={addIngredient}>
 					<input
 						name="ingredient"
 						type="text"
 						aria-label="Add ingredient"
-						placeholder={t.placeholder}
+						placeholder={translations[language].placeholder}
 					/>
-					<button>{t.addButton}</button>
+					<button>{translations[language].addButton}</button>
 				</form>
 				{ingredients.length > 0 ? (
 					<IngredientsList
 						ingredients={ingredients}
 						getRecipe={getRecipe}
-						ref={recipeView}
+						recipeRef={recipeView}
 						language={language}
 					/>
 				) : null}
@@ -62,6 +67,7 @@ export function App() {
 						recipe={recipe}
 						isLoading={isLoading}
 						language={language}
+						reset={reset}
 					/>
 				)}
 			</main>

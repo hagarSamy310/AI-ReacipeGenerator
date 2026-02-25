@@ -2,9 +2,9 @@ import "./IngredientsList.css";
 import {translations} from "../../translations"
 
 
-export function IngredientsList({ ingredients, getRecipe, ref, language}) {
-	const ingredientsList = ingredients.map((ingredient) => {
-		return <li key={ingredient}>{ingredient}</li>;
+export function IngredientsList({ ingredients, getRecipe, recipeRef, language}) {
+	const ingredientsList = ingredients.map((ingredient, i) => {
+		return <li key={i}>{ingredient}</li>;
 	});
 
 	return (
@@ -13,8 +13,8 @@ export function IngredientsList({ ingredients, getRecipe, ref, language}) {
 			<ul className="ingredients-list" aria-live="polite">
 				{ingredientsList}
 			</ul>
-			{ingredients.length > 3 ? (
-				<div className="get-recipe-container" ref={ref}>
+			{ingredients.length > 2 ? (
+				<div className="get-recipe-container" ref={recipeRef}>
 					<div>
 						<h3>{translations[language].recipePromptTitle}</h3>
 						<p>{translations[language].recipePromptDesc}</p>

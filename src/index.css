@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	font-family: "Tajawal", sans-serif;
 	background-color: #fafaf8;
+	font-size: clamp(0.9rem, 1.5vw, 1.125rem);
 }
 
 button {

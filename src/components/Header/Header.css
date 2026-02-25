@@ -16,6 +16,7 @@ header > img {
 header > h1 {
 	font-weight: 400;
 	white-space: nowrap;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .lang-toggle {
