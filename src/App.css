@@ -62,7 +62,7 @@ main {
 	border-radius: var(--radius-sm);
 	background-color: var(--color-dark);
 	color: var(--color-off-white);
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-md);
 	width: 140px;
 	font-weight: 500;
 	transition: background-color 0.2s ease-in-out;
