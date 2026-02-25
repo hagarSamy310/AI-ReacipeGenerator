@@ -1,48 +1,84 @@
 main {
-	padding: 30px 30px 10px;
+	padding: 30px 16px 10px;
 }
+
+@media (min-width: 480px) {
+	main {
+		padding: 30px 30px 10px;
+	}
+}
+
+/* Tagline */
 .tagline {
 	text-align: center;
 	padding-bottom: 1.1rem;
 	margin: 0;
-	font-size: clamp(1.2rem, 1.2rem + 1vw, 1.5rem );
+	font-size: var(--font-size-lg);
 }
-/* Add ingredients Form */
-form {
+
+/* Error message */
+.err-msg {
+	position: absolute;
+	opacity: 0;
+	background-color: var(--color-dark);
+	color: var(--color-white);
+	padding: 0.6rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--radius-md);
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: var(--font-size-sm);
+	white-space: nowrap;
+}
+
+.err-msg.visible {
+	opacity: 1;
+}
+
+/* --- Add Ingredient Form --- */
+.ingredient-form {
 	display: flex;
 	justify-content: center;
 	gap: 12px;
 	height: 38px;
 }
 
-form > input {
-	border-radius: 6px;
-	border: 1px solid #d1d5db;
+.ingredient-form input {
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--color-border);
 	padding: 10px 13px;
-	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--shadow-xs);
 	flex-grow: 1;
 	max-width: 400px;
-	min-width: 150px;
+	min-width: 120px;
+	font-family: var(--font-main);
+	font-size: var(--font-size-base);
 }
 
-form > button {
-	font-family: inter, sans-serif;
-	border-radius: 6px;
-	border: none;
-	background-color: #141413;
-	color: #fafaf8;
-	font-size: 0.875rem;
-	width: 150px;
+.ingredient-form button {
+	border-radius: var(--radius-sm);
+	background-color: var(--color-dark);
+	color: var(--color-off-white);
+	font-size: var(--font-size-sm);
+	width: 140px;
 	font-weight: 500;
-	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
 }
 
-form > button:hover {
-	background-color: #484747;
+@media (min-width: 480px) {
+	.ingredient-form button {
+		width: 150px;
+	}
 }
 
-form > button::before {
+.ingredient-form button:hover {
+	background-color: var(--color-dark-hover);
+}
+
+.ingredient-form button::before {
 	content: "+ ";
 	margin-right: 5px;
 }

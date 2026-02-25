@@ -20,7 +20,8 @@ const SYSTEM_PROMPT_AR = `
 
 const groq = new Groq({
 	apiKey: import.meta.env.VITE_GROQ_API_KEY,
-	dangerouslyAllowBrowser: true,
+	dangerouslyAllowBrowser: true /* used here because it's a client-side demo >>>
+  In production >> API calls should go through a backend to protect the API key!*/,
 });
 
 export async function getRecipesFromChefBot(ingredientsArr, language) {
@@ -42,6 +43,7 @@ export async function getRecipesFromChefBot(ingredientsArr, language) {
 			temperature: 0.7,
 			max_tokens: 1024,
 		});
+		// Adding a fallback message if the AI returns nothing
 		return (
 			completion.choices[0]?.message?.content ||
 			"No recipe available for provided ingredients!"

@@ -3,16 +3,18 @@ import {translations} from "../../translations"
 
 
 export function IngredientsList({ ingredients, getRecipe, recipeRef, language}) {
-	const ingredientsList = ingredients.map((ingredient, i) => {
-		return <li key={i}>{ingredient}</li>;
+	
+	const ingredientsList = ingredients.map((ingredient) => {
+		return <li key={crypto.randomUUID()}>{ingredient}</li>;
 	});
 
 	return (
-		<section>
+		<section className="ingredients-section">
 			<h2>{translations[language].ingredientsTitle}</h2>
 			<ul className="ingredients-list" aria-live="polite">
 				{ingredientsList}
 			</ul>
+			{/* Display CTA Get Recipe banner if ingredients >= 3 */}
 			{ingredients.length > 2 ? (
 				<div className="get-recipe-container" ref={recipeRef}>
 					<div>

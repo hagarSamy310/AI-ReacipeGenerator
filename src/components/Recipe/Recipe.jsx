@@ -11,7 +11,10 @@ export function Recipe({ recipe, isLoading, language, reset }) {
 				) : (
 					<>
 						<ReactMarkdown>{recipe}</ReactMarkdown>
-						<button className="reset-btn" onClick={reset}>{translations[language].resetButton}</button>
+						{/* Start Over button >> to reset eveything */}
+						<button className="reset-btn" onClick={reset}>
+							{translations[language].resetButton}
+						</button>
 					</>
 				)}
 			</article>
