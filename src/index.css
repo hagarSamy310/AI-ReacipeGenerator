@@ -13,10 +13,10 @@
 
 	/* Typography */
 	--font-main: "Tajawal", sans-serif;
-	--font-size-sm: 0.875rem;
-	--font-size-base: clamp(0.9rem, 1.5vw, 1.25rem);
-	--font-size-md: clamp(1.1rem, 1.5vw, 1.4rem);
-	--font-size-lg: clamp(1.2rem, 1.2rem + 1vw, 1.7rem);
+	--font-size-sm: 0.9rem;
+	--font-size-base: clamp(1rem, 1.5vw, 1.25rem);
+	--font-size-md: clamp(1.2rem, 1.5vw, 1.4rem);
+	--font-size-lg: clamp(1.2rem, 1.2rem + 1vw, 1.6rem);
 	--font-size-xl: clamp(1.5rem, 3vw, 2.2rem);
 
 	/* Spacing */
@@ -34,7 +34,6 @@
 /* Reset */
 * {
 	box-sizing: border-box;
-	-webkit-tap-highlight-color: transparent;
 }
 
 /* Base */
@@ -51,6 +50,7 @@ button {
 	font-family: var(--font-main);
 	border: none;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	padding: 10px 14px;
 }

@@ -34,14 +34,14 @@
 
 .get-recipe-container h3 {
 	font-weight: 500;
-	line-height: 24px;
+	line-height: 1.4;
 	font-size: var(--font-size-md);
 	margin: 0 0 4px;
 }
 
 .get-recipe-container p {
 	color: var(--color-text-subtle);
-	line-height: 20px;
+	line-height: 1.5;
 	font-size: var(--font-size-md);
 	margin: 0;
 }
