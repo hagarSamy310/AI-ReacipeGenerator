@@ -1,5 +1,5 @@
 .ingredients-section h2 {
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-md);
 }
 
 .ingredients-list {
@@ -8,13 +8,15 @@
 
 .ingredients-list li {
 	color: var(--color-text-muted);
-	line-height: 28px;
+	line-height: 1.6;
+	font-size: var(--font-size-md);
 }
 
 /* --- Get Recipe CTA --- */
 .get-recipe-container {
 	display: flex;
-	flex-direction: column; /* stacked on mobile */
+	flex-direction: column;
+	/* stacked on mobile */
 	border-radius: var(--radius-md);
 	background: var(--color-surface);
 	padding: 16px 20px;
