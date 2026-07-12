@@ -59,8 +59,10 @@
 	.get-recipe-container button {
 		align-self: center;
 	}
-}
-
-.get-recipe-container button:hover {
+	.get-recipe-container button:hover {
 	transform: scale(1.05);
 }
+
+}
+
+

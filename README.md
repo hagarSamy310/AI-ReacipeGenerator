@@ -86,4 +86,4 @@ src/
 > In a production app, API calls should be handled through a backend to protect the key.
 
 ---
-🔗 **Live Demo:** [Chef Bot App](https://airecipegenerator31.netlify.app/)
+🔗 **Live Demo:** [Chef Bot App](https://claude-chef.hagarsamy.workers.dev/)
